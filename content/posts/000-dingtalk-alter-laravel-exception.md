@@ -10,15 +10,15 @@ featured_image: https://wujunze.com/blog-images/r/p/001/laravel.png
 
 看了Hanson兄弟的[倍洽](https://laravel-china.org/articles/10158/use-bearychat-to-notify-you-of-your-system-exceptions)通知异常 
 
-我们团队主要用钉钉，就想找个Laravel的钉钉通知异常的包，最好是安装后开箱即用的。
+我们团队主要用钉钉，就想找个 Laravel 的钉钉通知异常的包，最好是安装后开箱即用的。
 
 <!-- more -->
 
 在Google和GitHub上找了有3分钟还是没有找到能开箱即用的，于是自己**动手丰衣足食**。
 
-花了20分钟"写"(chao)了一个Laravel  钉钉通知异常的包  **[wujunze/dingtalk-exception](https://github.com/wujunze/dingtalk-exception)**
+花了20分钟"写"(chao)了一个 Laravel 钉钉通知异常的包  **[wujunze/dingtalk-exception](https://github.com/wujunze/dingtalk-exception)**
 
-## 食用方法
+## "食"用方法
 
 ### 安装
 
