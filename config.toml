@@ -65,7 +65,7 @@ preserveTaxonomyNames = true
     keywords = "blog, PHP, 吴钧泽, GNU/Linux, Golang, Rust, 吴钧泽博客" # site keywords
 
     beian = ""
-    baiduAnalytics = ""
+    baiduAnalytics = "96063e3eeb9f8b4ef5cc85f99352b2f4"
     googleAnalytics = "UA-146554393-1" # Google 统计 id
 
     license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
