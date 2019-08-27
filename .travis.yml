@@ -1,7 +1,7 @@
 language: go
 
 go:
-  - "1.8"  # 指定Golang 1.8
+  - "1.12"  # 指定Golang 1.8
 
 env:
  global:
@@ -12,7 +12,7 @@ env:
 
 install:
  # 安装最新的hugo
- - go get github.com/spf13/hugo
+ - go get github.com/gohugoio/hugo
 
 script:
   - hugo
