@@ -51,7 +51,7 @@ preserveTaxonomyNames = true
     weight = 6
 
 [params]
-    since = 2017
+    since = 2015
     author = "wujunze"                          # Author's name
     avatar = "https://wujunze.com/blog-images/r/index/tx.png"           # Author's avatar
     subtitle = "Just for Fun"                  # Subtitle
@@ -92,4 +92,4 @@ preserveTaxonomyNames = true
     perPage= 15 # Pagination size, with maximum 100.
     pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
     createIssueManually= true # If it is 'false', it is auto to make a Github issue when the administrators login.
-    distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
+    distractionFreeMode= true # Enable hot key (cmd|ctrl + enter) submit comment.
