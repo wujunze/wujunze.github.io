@@ -1,6 +1,6 @@
 # My Blog
 
-[![Build Status](https://travis-ci.org/Mogeko/Blog.svg?branch=master)](https://travis-ci.org/wujunze/blog)
+[![Build Status](https://travis-ci.org/wujunze/blog.svg?branch=master)](https://travis-ci.org/wujunze/blog)
 
 这是 wujunze 的个人博客，地址：**<https://wujunze.com>**
 

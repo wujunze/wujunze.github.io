@@ -35,19 +35,3 @@ script:
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
   - git push --force --quiet "https://$GITHUB_TOKEN@${GH_REF}" master:master
-
-# before_deploy:
-#   # 防止其与 mogeko.github.io 冲突
-#   - rm -f CNAME
-
-# # 备份
-# deploy:
-#   provider: pages # 重要，指定这是一份github pages的部署配置
-#   skip-cleanup: true # 重要，不能省略
-#   local-dir: public # 静态站点文件所在目录
-#   # target-branch: master # 要将静态站点文件发布到哪个分支
-#   github-token: $GITHUB_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
-#   # fqdn: blog.yuantops.com # 如果是自定义域名，此处要填
-#   keep-history: true # 是否保持target-branch分支的提交记录
-#   on:
-#     branch: master # 博客源码的分支

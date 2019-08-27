@@ -61,7 +61,7 @@ preserveTaxonomyNames = true
 
     google_verification = ""
 
-    description = "Wujunze 的个人博客" # (Meta) 描述
+    description = "wujunze`s Blog  吴钧泽的博客" # (Meta) 描述
     keywords = "blog, PHP, 吴钧泽, GNU/Linux, Golang, Rust, 吴钧泽博客" # site keywords
 
     beian = ""
