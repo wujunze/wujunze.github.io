@@ -22,13 +22,13 @@ preserveTaxonomyNames = true
 
 [menu]
   [[menu.main]]
-    name = "Tools"
-    url = "/tools/"
+    name = "Blogs"
+    url = "/posts/"
     weight = 1
 
   [[menu.main]]
-    name = "Blog"
-    url = "/posts/"
+    name = "Projects"
+    url = "/projects/"
     weight = 2
 
   [[menu.main]]
