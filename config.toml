@@ -60,7 +60,7 @@ preserveTaxonomyNames = true
     home_mode = "other" # post or other
     enableGitalk = true # gitalk 评论系统
 
-    google_verification = ""
+    google_verification = "google4e7e32fb39276e74"
 
     description = "wujunze`s Blog  吴钧泽的博客" # (Meta) 描述
     keywords = "blog, PHP, 吴钧泽, GNU/Linux, Golang, Rust, 吴钧泽博客" # site keywords
