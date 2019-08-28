@@ -8,6 +8,7 @@ paginate = 11 # 每页的文章数
 enableEmoji = true # 支持 Emoji
 enableRobotsTXT = true # 支持 robots.txt
 
+googleAnalytics = "UA-146554393-1" # Google Analytics id
 
 preserveTaxonomyNames = true
 
@@ -66,7 +67,6 @@ preserveTaxonomyNames = true
 
     beian = ""
     baiduAnalytics = "96063e3eeb9f8b4ef5cc85f99352b2f4"
-    googleAnalytics = "UA-146554393-1" # Google 统计 id
 
     license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
 
