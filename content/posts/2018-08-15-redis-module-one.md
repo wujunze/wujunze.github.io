@@ -25,14 +25,6 @@ featured_image: https://www.w3cschool.cn/attachments/image/20170622/149811965371
 
 4.   非数据命令的异步执行，我们知道 redis 处理请求是单线程的，执行数据偏大的 flush 及 del 会阻塞的，redis 4.0 加了异步操作的功能…. 
 
-# 多图预告
-
-![file](https://upload-images.jianshu.io/upload_images/1812901-446ccd179528e67c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-![file](https://upload-images.jianshu.io/upload_images/1812901-4a01bb44f2b81fa3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![file](https://upload-images.jianshu.io/upload_images/1812901-1526d7b5ce124574?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 咱们今天就玩儿一下 Redis Module
 ## 模块可以做什么 
