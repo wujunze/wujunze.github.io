@@ -75,9 +75,9 @@ preserveTaxonomyNames = true
      Twitter = "itwujunze"
      Email   = "itwujunze@gmail.com"
     # Instagram = "xxoo"
-    # Wechat = "/images/me/wechat.png"  # Wechat QRcode image
+     Wechat = "https://wujunze.com/blog-images/r/pic/20190829204542.png"  # Wechat QRcode image
     # Facebook = "xxoo"
-    # Telegram = "xxoo"
+     Telegram = "wujunze"
     # Dribbble = "xxoo"
     # Medium = "xxoo"
 
