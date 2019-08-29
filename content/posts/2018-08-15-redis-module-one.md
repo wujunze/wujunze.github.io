@@ -74,15 +74,15 @@ Redis 在内置命令集中有一些阻塞命令。其中最常用的是 BLPOP�
 
 
 查看加载的模块:
-![file](https://upload-images.jianshu.io/upload_images/1812901-6174b95e79afa596?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![查看加载的模块](https://wujunze.com/blog-images/r/pic/20190829144820.png)
+
 
 另一种方式在运行时使用命令 ``` MODULE LOAD /path/to/panda.so``` 加载。
-
-![file](https://upload-images.jianshu.io/upload_images/1812901-68fde2070ee97b98?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145258.png)
 
 使用MODULE UNLOAD panda卸载。
 
-![file](https://upload-images.jianshu.io/upload_images/1812901-93b98a732e808423?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145336.png)
 
 在载入的模块的时候可以传入参数，如：loadmodule panda.so hello panda 1234，
 参数会被传入模块的OnLoad方法中。
@@ -106,7 +106,7 @@ int RedisModule_CreateCommand(RedisModuleCtx *ctx, const char *name, RedisModule
 
 ## 官方模块仓库 ([Redis Module Hub](https://redis.io/modules))
 官方模块仓库收录很多优质的模块:
-![file](https://upload-images.jianshu.io/upload_images/1812901-dc0b05b27da0ff3f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145357.png)
 
 #### 新数据结构，如：
 
@@ -144,39 +144,38 @@ git clone https://github.com/wujunze/redis-module-panda.git
 
 ### 2. make
 
-```shell
+```bash
 make
 ```
-![file](https://upload-images.jianshu.io/upload_images/1812901-562f5acebd9bdbce?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145419.png)
 
 ### 3. 加载模块
 #### **redis 的版本必须大于4.0**
-![file](https://upload-images.jianshu.io/upload_images/1812901-7ca99941396ce0dc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![](https://wujunze.com/blog-images/r/pic/20190829145434.png)
 
 
 #### **查看已经安装的模块**
 
-![file](https://upload-images.jianshu.io/upload_images/1812901-6a5d84e770733d9c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145504.png)
 
 #### **加载模块**
-![file](https://upload-images.jianshu.io/upload_images/1812901-3bc763f331215a9a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145525.png)
 
 ## Run
 ```shell
 127.0.0.1:6379> panda.hello
 ```
-![file](https://upload-images.jianshu.io/upload_images/1812901-1483669c041d68d9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145535.png)
 
 ### 测试命令
-![file](https://upload-images.jianshu.io/upload_images/1812901-c3d9c222763327d7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145547.png)
 
 ## 卸载模块
-![file](https://upload-images.jianshu.io/upload_images/1812901-0fdc95d01322a007?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145602.png)
 
 
 ## 完整的测试过程
-![file](https://upload-images.jianshu.io/upload_images/1812901-d9d7bd3386469669?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://wujunze.com/blog-images/r/pic/20190829145614.png)
 
 
 
