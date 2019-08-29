@@ -49,7 +49,7 @@ typedef struct {
 ```
 ![](https://wujunze.com/blog-images/r/pic/20190829193219.png)
 
-#定义 echo 模块的指令和参数转化函数
+#定义echo模块的指令和参数转化函数
 ![](https://wujunze.com/blog-images/r/pic/20190829193229.png)
 ## 定义模块 Context
 1. 定义 ngx_http_module_t 类型的结构体变量
