@@ -27,12 +27,12 @@ featured_image: https://www.w3cschool.cn/attachments/image/20170622/149811965371
 
 # 多图预告
 
-![file](http://upload-images.jianshu.io/upload_images/1812901-446ccd179528e67c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-446ccd179528e67c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-![file](http://upload-images.jianshu.io/upload_images/1812901-4a01bb44f2b81fa3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-4a01bb44f2b81fa3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![file](http://upload-images.jianshu.io/upload_images/1812901-1526d7b5ce124574?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-1526d7b5ce124574?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 咱们今天就玩儿一下 Redis Module
 ## 模块可以做什么 
@@ -82,15 +82,15 @@ Redis 在内置命令集中有一些阻塞命令。其中最常用的是 BLPOP�
 
 
 查看加载的模块:
-![file](http://upload-images.jianshu.io/upload_images/1812901-6174b95e79afa596?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-6174b95e79afa596?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 另一种方式在运行时使用命令 ``` MODULE LOAD /path/to/panda.so``` 加载。
 
-![file](http://upload-images.jianshu.io/upload_images/1812901-68fde2070ee97b98?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-68fde2070ee97b98?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 使用MODULE UNLOAD panda卸载。
 
-![file](http://upload-images.jianshu.io/upload_images/1812901-93b98a732e808423?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-93b98a732e808423?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 在载入的模块的时候可以传入参数，如：loadmodule panda.so hello panda 1234，
 参数会被传入模块的OnLoad方法中。
@@ -114,13 +114,13 @@ int RedisModule_CreateCommand(RedisModuleCtx *ctx, const char *name, RedisModule
 
 ## 官方模块仓库 ([Redis Module Hub](https://redis.io/modules))
 官方模块仓库收录很多优质的模块:
-![file](http://upload-images.jianshu.io/upload_images/1812901-dc0b05b27da0ff3f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-dc0b05b27da0ff3f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 新数据结构，如：
 
-[rejson](http://rejson.io/) 提供了对原生 JSON 格式支持，允许对 JSON 数据内的值进行获取与修改
+[rejson](https://rejson.io/) 提供了对原生 JSON 格式支持，允许对 JSON 数据内的值进行获取与修改
 
-[Redis Graph](http://redisgraph.io/) 添加了对图数据库的支持
+[Redis Graph](https://redisgraph.io/) 添加了对图数据库的支持
 等等
 
 ####   对现有数据结构功能的扩展，如：
@@ -155,36 +155,36 @@ git clone https://github.com/wujunze/redis-module-panda.git
 ```shell
 make
 ```
-![file](http://upload-images.jianshu.io/upload_images/1812901-562f5acebd9bdbce?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-562f5acebd9bdbce?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 3. 加载模块
 #### **redis 的版本必须大于4.0**
-![file](http://upload-images.jianshu.io/upload_images/1812901-7ca99941396ce0dc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-7ca99941396ce0dc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
 #### **查看已经安装的模块**
 
-![file](http://upload-images.jianshu.io/upload_images/1812901-6a5d84e770733d9c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-6a5d84e770733d9c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### **加载模块**
-![file](http://upload-images.jianshu.io/upload_images/1812901-3bc763f331215a9a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-3bc763f331215a9a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## Run
 ```shell
 127.0.0.1:6379> panda.hello
 ```
-![file](http://upload-images.jianshu.io/upload_images/1812901-1483669c041d68d9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-1483669c041d68d9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 测试命令
-![file](http://upload-images.jianshu.io/upload_images/1812901-c3d9c222763327d7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-c3d9c222763327d7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 卸载模块
-![file](http://upload-images.jianshu.io/upload_images/1812901-0fdc95d01322a007?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-0fdc95d01322a007?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## 完整的测试过程
-![file](http://upload-images.jianshu.io/upload_images/1812901-d9d7bd3386469669?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![file](https://upload-images.jianshu.io/upload_images/1812901-d9d7bd3386469669?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
