@@ -1,7 +1,7 @@
 ---
 title: "实战开发一个 Nginx 扩展 (Nginx Module)"
 date: 2017-06-13
-draft: true
+draft: false
 tags: ["Nginx", "C", "Fun","Nginx-Module"]
 categories: ["Nginx", "C","Nginx-Module"]
 featured_image: https://www.w3cschool.cn/attachments/image/20170622/1498119653712274.png
