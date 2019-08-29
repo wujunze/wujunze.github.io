@@ -62,4 +62,6 @@ GitHub仓库: https://github.com/wujunze/dingtalk-exception
 [cblink/bearychat-exception](https://github.com/cblink/bearychat-exception)   
 [wowiwj/ding-notice ](https://github.com/wowiwj/ding-notice)
 
+> 笔者才疏学浅,仓促成文,如有不当之处,还请大家斧正.
+
 ### Thanks  
