@@ -3,7 +3,7 @@ title: "使用钉钉通知你的 Laravel 框架系统异常"
 date: 2017-08-12
 draft: false
 tags: ["PHP", "Laravel", "Monitor"]
-categories: ["php", "laravel"]
+categories: ["PHP", "Laravel"]
 featured_image: https://wujunze.com/blog-images/r/p/001/laravel.png
 ---
 
