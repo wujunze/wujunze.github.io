@@ -16,4 +16,5 @@ menu: "main.links"
  
 {{< friend name="TIGERB 博客" url="http://tigerb.cn/" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
 {{< friend name="HanSon 博客" url="http://hanc.cc" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
+{{< friend name="CrazyCodes 博客" url="https://blog.fastrun.cn" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
 ### 未完待续 。。。。。。
