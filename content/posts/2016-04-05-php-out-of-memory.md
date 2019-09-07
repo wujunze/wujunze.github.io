@@ -73,7 +73,20 @@ featured_image: https://wujunze.com/blog-images/r/pic/20190903151456.png
  - 可以使用memory_get_usage()函数,获取当前占用内存 根据当前使用的内存来调整程序
  - **unset()函数只能在变量值占用内存空间超过256字节时才会释放内存空间。(PHP内核的gc垃圾回收机制决定)**
  - **有当指向该变量的所有变量（如引用变量）都被销毁后，才会释放内存**
-(PHP变量底层实现是一个_zval_struct结构体,refcount_gc表示引用计数 is_ref__gc表示是否为引用)
+(PHP变量底层实现是一个_zval_struct结构体,refcount_gc表示引用计数 is_ref__gc 表示是否为引用)
+
+
+## 修改 php.ini 调整内存限制
+```bash
+php -i | grep ini
+```
+![](https://wujunze.com/blog-images/r/pic/php-ini.png)
+
+修改 memory_limit 
+![](https://wujunze.com/blog-images/r/pic/change_memory_limit.png)
+
+
+
 
 
 > 笔者才疏学浅,仓促成文,如有不当之处,还请大家斧正.
