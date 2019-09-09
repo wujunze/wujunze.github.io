@@ -7,6 +7,7 @@ menu: "main.links"
 
 
 {{< friend name="阳明的博客" url="https://www.qikqiak.com" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
+{{< friend name="饶全成的博客" url="https://qcrao.com" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
 {{< friend name="白俊遥博客" url="https://baijunyao.com/" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
 {{< friend name="周梦康博客" url="https://mengkang.net/" logo="https://wujunze.com/favicon-16x16.png" word="" >}}
 {{< friend name="马胜杰博客" url="https://mashengjie.com" logo="https://wujunze.com/favicon-16x16.png" word="" >}}    
