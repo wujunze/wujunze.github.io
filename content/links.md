@@ -5,7 +5,8 @@ layout: "links"
 menu: "main.links"
 ---
 
-{{< friend name="Inspirer blog" url="https://www.insp.top" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
+{{< friend name="独自等待 blog" url="https://www.waitalone.cn/" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
+{{< friend name="Inspirer blog" url="https://www.insp.top" logo="https://wujunze.com/favicon-16x16.png" word="" >}} 
 {{< friend name="阳明的博客" url="https://www.qikqiak.com" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
 {{< friend name="Yanlong notes" url="https://notes.yanlong.me" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
 {{< friend name="饶全成的博客" url="https://qcrao.com" logo="https://wujunze.com/favicon-16x16.png" word="" >}}  
