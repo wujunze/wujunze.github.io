@@ -4,7 +4,7 @@ date: 2018-08-15
 draft: false
 tags: ["Redis", "C", "Fun","Redis-Module"]
 categories: ["Redis", "C","Redis-Module"]
-featured_image: https://www.w3cschool.cn/attachments/image/20170622/1498119653712274.png
+featured_image: https://wujunze.com/blog-images/r/pic/20190928151206.png
 ---
 
 # 引子
