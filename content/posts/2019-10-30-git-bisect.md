@@ -1,5 +1,5 @@
 ---
-title: "用 git bisect 定位你的 BUG"
+title: "使用 git bisect 定位你的 BUG"
 date: 2019-10-30
 draft: false
 tags: ["Git","Debug", "Tools"]
