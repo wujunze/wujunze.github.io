@@ -1,7 +1,7 @@
 language: go
 
 go:
- - "1.8"  # 指定Golang 1.8
+ - "1.12"  # 指定Golang 1.12
 
 env:
  global:
@@ -16,8 +16,12 @@ env:
 #     - master
 
 before_install:
- # 安装 hugo （version: v0.54.0）
- - sudo apt install hugo
+ # 安装 hugo
+ - mkdir $HOME/src
+ - cd $HOME/src
+ - git clone https://github.com/gohugoio/hugo.git
+ - cd hugo
+ - go install
 
 install:
  # 运行hugo命令
