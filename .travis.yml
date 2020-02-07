@@ -1,7 +1,7 @@
 language: go
 
 go:
- - "1.12"  # 指定Golang 1.12
+ - "1.8"  # 指定Golang 1.8
 
 env:
  global:
@@ -16,12 +16,12 @@ env:
 #     - master
 
 before_install:
- # 安装 hugo
- - mkdir $HOME/src
- - cd $HOME/src
- - git clone https://github.com/gohugoio/hugo.git
- - cd hugo
- - go install
+ # 安装依赖
+ - wget -q -O libstdc++6.deb http://security.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubuntu1~16.04.12_amd64.deb
+ - sudo dpkg --force-all -i libstdc++6.deb
+ # 安装 hugo （version: v0.54.0）
+ - wget -q -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_extended_0.55.6_Linux-64bit.deb
+ - sudo dpkg -i hugo.deb
 
 install:
  # 运行hugo命令
