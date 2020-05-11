@@ -3,4 +3,4 @@
 	url = https://github.com/wujunze/LeaveIt.git
 [submodule "themes/hugo-theme-geek"]
 	path = themes/hugo-theme-geek
-	url = git@github.com:wujunze/hugo-theme-geek.git
+	url = https://github.com/wujunze/hugo-theme-geek.git
