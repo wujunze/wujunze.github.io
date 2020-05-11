@@ -2,7 +2,7 @@ baseURL = "https://wujunze.com" # <head> 里面的 baseurl 信息，填你的博
 title = "wujunze`s Blog" # 浏览器的标题
 languageCode = "zh-cn" # 语言
 hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
-theme = "LeaveIt" # 主题 (需要自己下载)
+theme = "hugo-theme-geek" # 主题 (需要自己下载)
 
 paginate = 11 # 每页的文章数
 enableEmoji = true # 支持 Emoji
