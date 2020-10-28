@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noodp"/>
+    <meta name="author" content="wujunze">
+    <meta name="description" content="wujunze&#39;s Blog  吴钧泽的博客">
+    <meta name="keywords" content="Blog, PHP, 吴钧泽, GNU/Linux, Golang, Rust, 吴钧泽博客">
+    <meta name="google-site-verification" content="wZwOnZxRNoEyqOUOWvOYUgxOwGOG7U1peSlOy88HnVg" />
+    <link rel="prev" href="https://wujunze.com/2019/2019-08-29-pangu-js/" />
+    <link rel="next" href="https://wujunze.com/2020/2020-05-08-asrock-hackintosh/" />
+    <link rel="canonical" href="https://wujunze.com/2019/2019-10-30-git-bisect/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>
+        
+        
+            使用 git bisect 定位你的 BUG | wujunze`s Blog
+        
+    </title>
+    <meta name="title" content="使用 git bisect 定位你的 BUG | wujunze`s Blog">
+    
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+    
+    
+ 
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/wujunze.com"
+    },
+    "articleSection" : "posts",
+    "name" : "使用 git bisect 定位你的 BUG",
+    "headline" : "使用 git bisect 定位你的 BUG",
+    "description" : "Git 是开发者的好帮手，今天跟大家分享的是用 git bisect 来找到你代码中的 bad commit 。 背景 你可能遇到过这种情况, 昨天下班前把模块开发完了, 单元测试验证通过, git commmit",
+    "inLanguage" : "zh-cn",
+    "author" : "wujunze",
+    "creator" : "wujunze",
+    "publisher": "wujunze",
+    "accountablePerson" : "wujunze",
+    "copyrightHolder" : "wujunze",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-30 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2019-10-30 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/wujunze.com\/2019\/2019-10-30-git-bisect\/",
+    "wordCount" : "687",
+    "keywords" : [ "Git","Debug","Tools", "wujunze`s Blog"]
+}
+</script>
+
+  </head>
+    <body class="">
+        <div class="wrapper">
+            <nav class="navbar">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
+    
+    <div class="container">
+        
+            <div class="navbar-header header-back2home-logo">
+                <span class="logo_mark" >>$</span>
+                <a href="https://wujunze.com">
+                    <span class="logo_text" >cd ~</span>
+                    <span class="logo_cursor" ></span>
+                </a>
+            </div>
+        
+        <div class="navbar-right">
+                
+                <span class="menu">
+                
+                <a class="menu-item" href="/posts/" title="">Blogs</a>
+                
+                <a class="menu-item" href="/projects/" title="">Projects</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/links/" title="">Links</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/projects/" title=""></a>
+                
+                <a class="menu-item" href="/about/" title="wujunze">wujunze</a>
+                
+                <span class="divide"></span>
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+                </span>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
+    
+     <div class="container">
+        <div class="navbar">
+            <div class="navbar-header header-logo">
+                    <a href="https://wujunze.com">wujunze`s Blog</a>
+            </div>
+            <div class="navbar-right">
+                <div><a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a></div>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                <nav class="mb-md">
+                    
+                    
+                        <a class="menu-item" href="/posts/" title="">
+                            <h3>Blogs</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/projects/" title="">
+                            <h3>Projects</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/categories/" title="">
+                            <h3>Categories</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/tags/" title="">
+                            <h3>Tags</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/links/" title="">
+                            <h3>Links</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/about/" title="">
+                            <h3>About</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/projects/" title="">
+                            <h3></h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/about/" title="wujunze">
+                            <h3>wujunze</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                </nav>
+        </div>
+    </div>
+</nav>
+            <main class="main">
+                <div class="container">
+                    
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">使用 git bisect 定位你的 BUG</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://wujunze.com" rel="author">wujunze</a> with ♥
+                <span class="post-time">
+                on <time datetime=2019-10-30 itemprop="datePublished">October 30, 2019</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                        
+                        
+                          <a href="https://wujunze.com/categories/git/"> Git, </a>
+                        
+                        
+                        
+                        
+                          <a href="https://wujunze.com/categories/debug/"> Debug, </a>
+                        
+                        
+                        
+                        
+                          <a href="https://wujunze.com/categories/tools/"> Tools, </a>
+                        
+                        
+                </span>
+                <span class="post-word-count">687 words</span>
+        </div>
+    </header>
+
+    <div class="post-content">
+        
+
+        
+        
+            
+        
+
+        
+          <img src="https://wujunze.com/blog-images/r/pic/git_log.png" class="featured_image">
+        
+        
+        
+        
+        
+
+        
+        
+        
+
+        <p>Git 是开发者的好帮手，今天跟大家分享的是用 git bisect 来找到你代码中的 bad commit 。</p>
+<!-- raw HTML omitted -->
+<h2 id="背景">背景</h2>
+<p>你可能遇到过这种情况, 昨天下班前把模块开发完了, 单元测试验证通过, <code>git commmit</code> 盖上电脑 开开心心下班啦 😄
+第二天啥上午来了,继续开发,提交了几个 commit ,下午部署了一个版本,发现昨天测试通过的代码出现了 BUG 😂
+这个时间你会怎么做, 可能的翻出现 BUG 代码文件的 <code>git log</code>  一翻发现 有20个 commit   🤦‍
+此时你的心情可能是崩溃的 🔥</p>
+<p>告别人肉排查 bad  commit   借助 <code>git bisect</code> 找 BUG  ✌️</p>
+<h2 id="具体方法">具体方法</h2>
+<h3 id="先通过-git-log-命令-找到你确定代码是-ok-的-git-hash---再找到你当前出现-bug-的-git-hash">先通过 <code>git log</code> 命令 找到你确定代码是 OK 的 git hash   再找到你当前出现 BUG 的 git hash</h3>
+<h3 id="然后-使用-git-bisect-start-开始咱们的奇妙-debug-之旅-">然后 使用 <code>git bisect start</code> 开始咱们的奇妙 debug 之旅 🚀</h3>
+<h3 id="开始对-commit-做标记">开始对 commit 做标记</h3>
+<h4 id="告诉-git-这个-commit刚才找出来确定代码是ok的-commit-hash-是-ok-的-git-bisect-good-5d5dba7">告诉 git 这个 commit(刚才找出来确定代码是OK的 commit hash) 是 OK 的 <code>git bisect good 5d5dba7</code></h4>
+<h4 id="告诉-git-当前最后一个-commit-代码是有-bug-的--git-bisect-bad-692ac39-">告诉 git 当前最后一个 commit 代码是有 BUG 的  <code>git bisect bad 692ac39 </code></h4>
+<h2 id="git-会进行二分查找">git 会进行二分查找</h2>
+<h3 id="然后开始开始-test--验证当前-hash-的-commit-的代码是不是-ok-的">然后开始开始 test  验证当前 hash 的 commit 的代码是不是 OK 的</h3>
+<h3 id="如果当前代码-test-不通过-就标记为-bad--git-bisect-bad">如果当前代码 test 不通过 就标记为 bad  <code>git bisect bad</code></h3>
+<h3 id="反之如果当前代码-test-通过-就标记为-good--git-bisect-good">反之如果当前代码 test 通过 就标记为 good  <code>git bisect good</code></h3>
+<h2 id="反复的进行-test-和标记--直到找出那个-bad-commit-为止">反复的进行 test 和标记  直到找出那个 bad commit 为止</h2>
+<h2 id="然后退出-git-bisect-模式--git-bisect-reset-">然后退出 git bisect 模式 <code>git bisect reset</code></h2>
+<p>附上操作流程图  <img src="https://wujunze.com/blog-images/r/pic/git_debug.png" alt="git bisect" loading="lazy" ></p>
+<h2 id="附上官方文档--git-docshttpsgit-scmcomdocsgit-bisect">附上官方文档  <a href="https://git-scm.com/docs/git-bisect">Git Docs</a></h2>
+<h2 id="附上二分查找可视化动画-binary-search-visualizationhttpswwwcsusfcaedugallesvisualizationsearchhtml">附上<strong>二分查找</strong>可视化动画 <a href="https://www.cs.usfca.edu/~galles/visualization/Search.html">binary search visualization</a></h2>
+<h2 id="附上我的命令行操作记录">附上我的命令行操作记录</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wujunze@Mac: ~/monkey/code/monkey-api develop
+ $ git bisect start                                                                                                                                              <span style="color:#f92672">[</span>20:31:46<span style="color:#f92672">]</span>
+ 
+wujunze@Mac: ~/monkey/code/monkey-api develop
+ $ git logg                                                                                                                                                      <span style="color:#f92672">[</span>20:31:50<span style="color:#f92672">]</span>
+ 
+wujunze@Mac: ~/monkey/code/monkey-api develop
+ $ git bisect good 16e91a8                                                                                                                                       <span style="color:#f92672">[</span>20:31:54<span style="color:#f92672">]</span>
+ 
+wujunze@Mac: ~/monkey/code/monkey-api develop
+ $ git logg                                                                                                                                                      <span style="color:#f92672">[</span>20:31:59<span style="color:#f92672">]</span>
+ 
+wujunze@Mac: ~/monkey/code/monkey-api develop
+ $ git bisect bad 692ac39                                                                                                                                        <span style="color:#f92672">[</span>20:32:04<span style="color:#f92672">]</span>
+Bisecting: <span style="color:#ae81ff">9</span> revisions left to test after this <span style="color:#f92672">(</span>roughly <span style="color:#ae81ff">3</span> steps<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>cd1a0814fe21aa3e06020efb5aa4118ead17acce<span style="color:#f92672">]</span> not filter
+ 
+wujunze@Mac: ~/monkey/code/monkey-api cd1a081
+ $ git bisect bad                                                                                                                                                <span style="color:#f92672">[</span>20:32:07<span style="color:#f92672">]</span>
+Bisecting: <span style="color:#ae81ff">4</span> revisions left to test after this <span style="color:#f92672">(</span>roughly <span style="color:#ae81ff">2</span> steps<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>63bf3176854a4fe112d612cee3f6bacce9e77e7d<span style="color:#f92672">]</span> fix merge
+ 
+wujunze@Mac: ~/monkey/code/monkey-api 63bf317
+ $ git bisect good                                                                                                                                               <span style="color:#f92672">[</span>20:32:11<span style="color:#f92672">]</span>
+Bisecting: <span style="color:#ae81ff">2</span> revisions left to test after this <span style="color:#f92672">(</span>roughly <span style="color:#ae81ff">1</span> step<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>798239a0397c52127c721b8b84bb430b5fd0e83b<span style="color:#f92672">]</span> debug
+ 
+wujunze@Mac: ~/monkey/code/monkey-api 798239a
+ $ git bisect bad                                                                                                                                                <span style="color:#f92672">[</span>20:32:14<span style="color:#f92672">]</span>
+Bisecting: <span style="color:#ae81ff">0</span> revisions left to test after this <span style="color:#f92672">(</span>roughly <span style="color:#ae81ff">0</span> steps<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>5d5dba7c3fc947768cc609493de9808f3d9cf635<span style="color:#f92672">]</span> fix assert logic
+ 
+wujunze@Mac: ~/monkey/code/monkey-api 5d5dba7
+ $ git bisect bad                                                                                                                                                <span style="color:#f92672">[</span>20:32:23<span style="color:#f92672">]</span>
+5d5dba7c3fc947768cc609493de9808f3d9cf635 is the first bad commit
+commit 5d5dba7c3fc947768cc609493de9808f3d9cf635
+Author: wujunze &lt;itwujunze@163.com&gt;
+Date:   Tue Oct <span style="color:#ae81ff">29</span> 18:20:36 <span style="color:#ae81ff">2019</span> +0800
+
+    fix assert logic
+
+:040000 <span style="color:#ae81ff">040000</span> b5d77b6ac82d8427d1bc3a9db2213f6c10ea0d63 3f49c18b6569282f7fa2a2c935b9ba73d6d0fbc0 M      app
+ 
+wujunze@Mac: ~/monkey/code/monkey-api 5d5dba7
+ $ git bisect reset                                                                                                                                              <span style="color:#f92672">[</span>20:32:27<span style="color:#f92672">]</span>
+Previous HEAD position was 5d5dba7 fix assert logic
+Switched to branch <span style="color:#e6db74">&#39;develop&#39;</span>
+Your branch is up to date with <span style="color:#e6db74">&#39;origin/develop&#39;</span>.
+ 
+wujunze@Mac: ~/monkey/code/monkey-api develop
+ $                                                                                                                                                               <span style="color:#f92672">[</span>20:36:38<span style="color:#f92672">]</span>                                                                               
+</code></pre></div><h2 id="百闻不如一-run--大家可以自己试一下--有什么问题可以在文章下面评论">百闻不如一 Run  大家可以自己试一下  有什么问题可以在文章下面评论</h2>
+<blockquote>
+<p>笔者才疏学浅,仓促成文,如有不当之处,还请大家斧正.</p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>wujunze </span>
+                </p>
+            
+
+            
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://wujunze.com/2019/2019-10-30-git-bisect/>https://wujunze.com/2019/2019-10-30-git-bisect/</span>
+            </p>
+            
+            
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s):
+            
+            <span class="tag"><a href="https://wujunze.com/tags/git/">
+                    #Git</a></span>
+            
+            <span class="tag"><a href="https://wujunze.com/tags/debug/">
+                    #Debug</a></span>
+            
+            <span class="tag"><a href="https://wujunze.com/tags/tools/">
+                    #Tools</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> ·
+                <span><a href="https://wujunze.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://wujunze.com/2019/2019-08-29-pangu-js/" class="prev" rel="prev" title="文章洁癖患者福音 - pangujs"><i class="iconfont icon-left"></i>&nbsp;文章洁癖患者福音 - pangujs</a>
+        
+        
+        <a href="https://wujunze.com/2020/2020-05-08-asrock-hackintosh/" class="next" rel="next" title="Hackintosh (黑苹果)折腾">Hackintosh (黑苹果)折腾&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+        
+            
+                <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.css">
+<script src="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+
+        clientID: '1614d85baa17a8e2870d',
+        clientSecret: 'ff713cfd4f5e629697cbb36014f67d239450ea46',
+        repo: 'blog-commits',
+        owner: 'wujunze',
+        admin: ['wujunze'],
+        id: location.pathname, 
+        distractionFreeMode: false 
+    });
+    (function () {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+            return;
+        }
+        gitalk.render('gitalk-container');
+    })();
+</script>
+
+            
+        
+    </div>
+</article>
+                </div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2015 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i>
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://wujunze.com">wujunze</a> | </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/wujunze/hugo-theme-geek" target="_blank" rel="external nofollow">Hugo-theme-geek</a></span>
+    </div>
+</footer>
+
+
+
+
+
+<script src="/js/vendor_main.min.js" defer ></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script> pangu.spacingPage();</script>
+
+
+
+        </div>
+    </body>
+</html>

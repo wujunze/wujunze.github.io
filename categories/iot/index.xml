@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT on wujunze`s Blog</title>
+    <link>https://wujunze.com/categories/iot/</link>
+    <description>Recent content in IoT on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/categories/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>玩儿一下 Micro Bit </title>
+      <link>https://wujunze.com/2020/2020-05-12-micro-bit-video/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2020/2020-05-12-micro-bit-video/</guid>
+      <description>Micro Bit Micro Bit（也叫做BBC Micro Bit，或风格化为micro:bit）是基于ARM架构的嵌入式系统，由BBC设计用于英国的计算机教育。 电路板大小</description>
+    </item>
+    
+  </channel>
+</rss>

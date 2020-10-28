@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>overseer on wujunze`s Blog</title>
+    <link>https://wujunze.com/categories/overseer/</link>
+    <description>Recent content in overseer on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/categories/overseer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>让你的 Go 服务优雅的重启 (解决代码发布 Go 服务闪断的问题)</title>
+      <link>https://wujunze.com/2020/2020-10-26-go-service-upgrade/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2020/2020-10-26-go-service-upgrade/</guid>
+      <description>起因 有同学反馈 发布 Go 服务代码 监控报警会出现一堆 5xx 报警 原因 查看生产环境的项目部署脚本 发现目前的部署脚本会 supervisorctl restart monkey_interact_service 暴力重启 supervisor 托管的守护进程 会导致 go</description>
+    </item>
+    
+  </channel>
+</rss>

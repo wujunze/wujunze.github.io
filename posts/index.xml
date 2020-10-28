@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on wujunze`s Blog</title>
+    <link>https://wujunze.com/posts/</link>
+    <description>Recent content in Posts on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>玩儿一下 Micro Bit </title>
+      <link>https://wujunze.com/2020/2020-05-12-micro-bit-video/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2020/2020-05-12-micro-bit-video/</guid>
+      <description>Micro Bit Micro Bit（也叫做BBC Micro Bit，或风格化为micro:bit）是基于ARM架构的嵌入式系统，由BBC设计用于英国的计算机教育。 电路板大小</description>
+    </item>
+    
+    <item>
+      <title>让你的 Go 服务优雅的重启 (解决代码发布 Go 服务闪断的问题)</title>
+      <link>https://wujunze.com/2020/2020-10-26-go-service-upgrade/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2020/2020-10-26-go-service-upgrade/</guid>
+      <description>起因 有同学反馈 发布 Go 服务代码 监控报警会出现一堆 5xx 报警 原因 查看生产环境的项目部署脚本 发现目前的部署脚本会 supervisorctl restart monkey_interact_service 暴力重启 supervisor 托管的守护进程 会导致 go</description>
+    </item>
+    
+    <item>
+      <title>Hackintosh (黑苹果)折腾</title>
+      <link>https://wujunze.com/2020/2020-05-08-asrock-hackintosh/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2020/2020-05-08-asrock-hackintosh/</guid>
+      <description>ASRock-Z370-Pro4-9900K-Hackintosh 系统版本 MacOS Catalina EFI 文件 GitHub 链接 EFI 引导文件可以去 git clone https://github.com/wujunze/ASRock-Z370-Pro4-9900K-Hackintosh 详细配置 硬件 品牌型号 处理器 英特尔 Core i9-9900K 3.6GHz 八核心十六线程 主板 华擎 Z370 Pro4 内存 芝奇 DDR4 3200MHz 8GB x 2 硬盘 三星 970</description>
+    </item>
+    
+    <item>
+      <title>使用 git bisect 定位你的 BUG</title>
+      <link>https://wujunze.com/2019/2019-10-30-git-bisect/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2019/2019-10-30-git-bisect/</guid>
+      <description>Git 是开发者的好帮手，今天跟大家分享的是用 git bisect 来找到你代码中的 bad commit 。 背景 你可能遇到过这种情况, 昨天下班前把模块开发完了, 单元测试验证通过, git commmit</description>
+    </item>
+    
+    <item>
+      <title>文章洁癖患者福音 - pangujs</title>
+      <link>https://wujunze.com/2019/2019-08-29-pangu-js/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2019/2019-08-29-pangu-js/</guid>
+      <description>很多同学看到文章中文英文之间没有空格,会很难受,可是很多文章中文英文之间没有空格,那么 pangu.js 可以拯救你一下 ✌️ 使用方法也很简单 在你需要 pangu.js 的页面添</description>
+    </item>
+    
+    <item>
+      <title>手把手教你玩儿一下 Redis Module 之模块解读</title>
+      <link>https://wujunze.com/2018/2018-08-15-redis-module-one/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2018/2018-08-15-redis-module-one/</guid>
+      <description>引子 Redis 现在的 Stable 版本是4.0.11, 对Redis比较关注的童鞋都知道,4.0引入了 Module 。 我们先一起看看 Redis 4.0都更新了啥? 官方说法 Redis 4.0 was released as GA in</description>
+    </item>
+    
+    <item>
+      <title>PHP 依赖注入 (DI) 和容器 (IoC) 的简单实现</title>
+      <link>https://wujunze.com/2017/2017-08-31-php-di/</link>
+      <pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2017/2017-08-31-php-di/</guid>
+      <description>用过 Symfony Laravel 等框架的同学，应该都听过一个名词叫做 &amp;ldquo;容器&amp;rdquo; PHP 中的容器是个什么玩意儿呢？ 百闻不如一 Run 今天咱们一起来实现一个简</description>
+    </item>
+    
+    <item>
+      <title>使用钉钉通知你的 Laravel 框架系统异常</title>
+      <link>https://wujunze.com/2017/2017-08-12-dingtalk-alter-laravel-exception/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2017/2017-08-12-dingtalk-alter-laravel-exception/</guid>
+      <description>看了Hanson兄弟的倍洽通知异常 我们团队主要用钉钉，就想找个 Laravel 的钉钉通知异常的包，最好是安装后开箱即用的。 在Google和GitHub上找</description>
+    </item>
+    
+    <item>
+      <title>实战开发一个 Nginx 扩展 (Nginx Module)</title>
+      <link>https://wujunze.com/2017/2017-06-13-nginx-module/</link>
+      <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2017/2017-06-13-nginx-module/</guid>
+      <description>实战开发一个Nginx扩展 (Nginx Module) repo地址 https://github.com/wujunze/nginx-http-echo-module nginx_module_echo 使用 echo 指令输出一个字符串 Nginx 版本 Nginx1.0.10 https://github.com/nginx/nginx/releases/tag/release-1.0.10 开发环境 OS : CentOS Linux release 7.2.1511 (Core) 安装一个干净的 Nginx 下载 Nginx10.10 并且解压它 安装 gcc</description>
+    </item>
+    
+    <item>
+      <title>谁动了我的内存之 PHP 内存溢出</title>
+      <link>https://wujunze.com/2016/2016-04-05-php-out-of-memory/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2016/2016-04-05-php-out-of-memory/</guid>
+      <description>今天上午刚到公司，就有同事在公司群里反映某个计划任务出现问题了。我就怀着刨根问底的心，去查看了log。发现挺有意思的一个问题，PHP内存溢出</description>
+    </item>
+    
+  </channel>
+</rss>

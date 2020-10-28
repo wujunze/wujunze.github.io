@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>9900K on wujunze`s Blog</title>
+    <link>https://wujunze.com/tags/9900k/</link>
+    <description>Recent content in 9900K on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 08 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/tags/9900k/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hackintosh (黑苹果)折腾</title>
+      <link>https://wujunze.com/2020/2020-05-08-asrock-hackintosh/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2020/2020-05-08-asrock-hackintosh/</guid>
+      <description>ASRock-Z370-Pro4-9900K-Hackintosh 系统版本 MacOS Catalina EFI 文件 GitHub 链接 EFI 引导文件可以去 git clone https://github.com/wujunze/ASRock-Z370-Pro4-9900K-Hackintosh 详细配置 硬件 品牌型号 处理器 英特尔 Core i9-9900K 3.6GHz 八核心十六线程 主板 华擎 Z370 Pro4 内存 芝奇 DDR4 3200MHz 8GB x 2 硬盘 三星 970</description>
+    </item>
+    
+  </channel>
+</rss>

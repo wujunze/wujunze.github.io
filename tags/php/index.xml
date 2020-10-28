@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP on wujunze`s Blog</title>
+    <link>https://wujunze.com/tags/php/</link>
+    <description>Recent content in PHP on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 31 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP 依赖注入 (DI) 和容器 (IoC) 的简单实现</title>
+      <link>https://wujunze.com/2017/2017-08-31-php-di/</link>
+      <pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2017/2017-08-31-php-di/</guid>
+      <description>用过 Symfony Laravel 等框架的同学，应该都听过一个名词叫做 &amp;ldquo;容器&amp;rdquo; PHP 中的容器是个什么玩意儿呢？ 百闻不如一 Run 今天咱们一起来实现一个简</description>
+    </item>
+    
+    <item>
+      <title>使用钉钉通知你的 Laravel 框架系统异常</title>
+      <link>https://wujunze.com/2017/2017-08-12-dingtalk-alter-laravel-exception/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2017/2017-08-12-dingtalk-alter-laravel-exception/</guid>
+      <description>看了Hanson兄弟的倍洽通知异常 我们团队主要用钉钉，就想找个 Laravel 的钉钉通知异常的包，最好是安装后开箱即用的。 在Google和GitHub上找</description>
+    </item>
+    
+    <item>
+      <title>谁动了我的内存之 PHP 内存溢出</title>
+      <link>https://wujunze.com/2016/2016-04-05-php-out-of-memory/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2016/2016-04-05-php-out-of-memory/</guid>
+      <description>今天上午刚到公司，就有同事在公司群里反映某个计划任务出现问题了。我就怀着刨根问底的心，去查看了log。发现挺有意思的一个问题，PHP内存溢出</description>
+    </item>
+    
+  </channel>
+</rss>

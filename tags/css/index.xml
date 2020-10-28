@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on wujunze`s Blog</title>
+    <link>https://wujunze.com/tags/css/</link>
+    <description>Recent content in CSS on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 29 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>文章洁癖患者福音 - pangujs</title>
+      <link>https://wujunze.com/2019/2019-08-29-pangu-js/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2019/2019-08-29-pangu-js/</guid>
+      <description>很多同学看到文章中文英文之间没有空格,会很难受,可是很多文章中文英文之间没有空格,那么 pangu.js 可以拯救你一下 ✌️ 使用方法也很简单 在你需要 pangu.js 的页面添</description>
+    </item>
+    
+  </channel>
+</rss>

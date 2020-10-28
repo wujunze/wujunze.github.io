@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ioc on wujunze`s Blog</title>
+    <link>https://wujunze.com/categories/ioc/</link>
+    <description>Recent content in Ioc on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 31 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/categories/ioc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP 依赖注入 (DI) 和容器 (IoC) 的简单实现</title>
+      <link>https://wujunze.com/2017/2017-08-31-php-di/</link>
+      <pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2017/2017-08-31-php-di/</guid>
+      <description>用过 Symfony Laravel 等框架的同学，应该都听过一个名词叫做 &amp;ldquo;容器&amp;rdquo; PHP 中的容器是个什么玩意儿呢？ 百闻不如一 Run 今天咱们一起来实现一个简</description>
+    </item>
+    
+  </channel>
+</rss>

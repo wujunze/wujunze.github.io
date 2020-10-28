@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Laravel on wujunze`s Blog</title>
+    <link>https://wujunze.com/categories/laravel/</link>
+    <description>Recent content in Laravel on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 12 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用钉钉通知你的 Laravel 框架系统异常</title>
+      <link>https://wujunze.com/2017/2017-08-12-dingtalk-alter-laravel-exception/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2017/2017-08-12-dingtalk-alter-laravel-exception/</guid>
+      <description>看了Hanson兄弟的倍洽通知异常 我们团队主要用钉钉，就想找个 Laravel 的钉钉通知异常的包，最好是安装后开箱即用的。 在Google和GitHub上找</description>
+    </item>
+    
+  </channel>
+</rss>

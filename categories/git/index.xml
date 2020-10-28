@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on wujunze`s Blog</title>
+    <link>https://wujunze.com/categories/git/</link>
+    <description>Recent content in Git on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 git bisect 定位你的 BUG</title>
+      <link>https://wujunze.com/2019/2019-10-30-git-bisect/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2019/2019-10-30-git-bisect/</guid>
+      <description>Git 是开发者的好帮手，今天跟大家分享的是用 git bisect 来找到你代码中的 bad commit 。 背景 你可能遇到过这种情况, 昨天下班前把模块开发完了, 单元测试验证通过, git commmit</description>
+    </item>
+    
+  </channel>
+</rss>

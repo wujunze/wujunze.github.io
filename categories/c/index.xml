@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on wujunze`s Blog</title>
+    <link>https://wujunze.com/categories/c/</link>
+    <description>Recent content in C on wujunze`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://wujunze.com/categories/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>手把手教你玩儿一下 Redis Module 之模块解读</title>
+      <link>https://wujunze.com/2018/2018-08-15-redis-module-one/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2018/2018-08-15-redis-module-one/</guid>
+      <description>引子 Redis 现在的 Stable 版本是4.0.11, 对Redis比较关注的童鞋都知道,4.0引入了 Module 。 我们先一起看看 Redis 4.0都更新了啥? 官方说法 Redis 4.0 was released as GA in</description>
+    </item>
+    
+    <item>
+      <title>实战开发一个 Nginx 扩展 (Nginx Module)</title>
+      <link>https://wujunze.com/2017/2017-06-13-nginx-module/</link>
+      <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://wujunze.com/2017/2017-06-13-nginx-module/</guid>
+      <description>实战开发一个Nginx扩展 (Nginx Module) repo地址 https://github.com/wujunze/nginx-http-echo-module nginx_module_echo 使用 echo 指令输出一个字符串 Nginx 版本 Nginx1.0.10 https://github.com/nginx/nginx/releases/tag/release-1.0.10 开发环境 OS : CentOS Linux release 7.2.1511 (Core) 安装一个干净的 Nginx 下载 Nginx10.10 并且解压它 安装 gcc</description>
+    </item>
+    
+  </channel>
+</rss>
