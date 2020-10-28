@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1  # v2 does not have submodules option now
-      - with:
+        with:
         submodules: true
 
       - name: Setup Hugo
